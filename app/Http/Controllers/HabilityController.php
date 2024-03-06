@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Hability;
+use App\Models\Ocupation;
 
 class HabilityController extends Controller
 {
@@ -14,7 +15,8 @@ class HabilityController extends Controller
     }
 
     public function create(){
-        return view ('hability.create');
+        $ocupations= Ocupation::all();
+        return view ('hability.create', ['ocupations'=> $ocupations]);
     }
 
     public function store(Request $request){
