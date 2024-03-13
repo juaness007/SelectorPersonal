@@ -13,13 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('municipalities', function (Blueprint $table) {
-            $table->id();
-            $table->string('code')->unique;
-            $table->string('name');
-            $table->foreignId('department_id')->constrained('departments')->onDelete('cascade');
-            $table->timestamps();
-        });
+         Schema::create('departments', function (Blueprint $table) {
+             $table->id();   
+             $table->string('name');          
+             $table->foreignId('country_id')->constrained('countries')->onDelete('cascade');                       
+             $table->timestamps();
+         });
     }
 
     /**
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('municipalities');
+        Schema::dropIfExists('departments');
     }
 };

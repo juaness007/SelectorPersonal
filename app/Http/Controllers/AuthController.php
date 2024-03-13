@@ -23,7 +23,7 @@ class AuthController extends Controller
         }
 
         
-        dd(Auth::user()); 
+         dd(Auth::user()); 
         return redirect()->route('login')->with('error', 'Credenciales incorrectas. Por favor, inténtelo de nuevo.');
     }
 

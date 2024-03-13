@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('estilos')
+    <link href="{{ asset('css/nuevo.css') }}" rel="stylesheet">
+@endsection
 @section('content')
     <h3>Vacancies Table</h3>
     
@@ -44,7 +47,7 @@
                     <td>{{ $vacancy->end_date }}</td>
                     <td>{{ $vacancy->available_jobs }}</td>
                     <td>
-                    <form action="{{ route('postulate.apply', $vacancy->id) }}" method="POST">
+                    <form action="{{route('candidate.postulation', ['user' => $user->id, 'vacancie' => $vacancie->id])}}" method="post">
                                     @csrf
                                     <button type="submit">Postularse</button>
                                 </form>
