@@ -83,14 +83,14 @@ nav ul li:hover {
  }
 
 
-table {
-    border: 1px solid #000000;
-    width: 80%;
+ table {
+    border: 3px solid #000000;
+    width: 50%;
     border-collapse: collapse;
     margin-top: 20px;
     background-color: transparent;
 
-}
+} 
 
 th, td {
     border: 1px solid rgb(32, 32, 32);
@@ -99,9 +99,9 @@ th, td {
 }
 
 th {
-    background-color: rgb(88, 79, 88);
+    background-color: rgb(44, 100, 221);
     color: white;
-}
+} 
 
 h3 {
     color: rgb(255, 254, 255);

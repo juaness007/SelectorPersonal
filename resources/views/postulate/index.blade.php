@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('estilos')
+    <link href="{{ asset('css/nuevo.css') }}" rel="stylesheet">
+@endsection
 @section('content')
     <h3>Vacantes a las que has aplicado</h3>
 

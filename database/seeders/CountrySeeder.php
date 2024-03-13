@@ -15,9 +15,9 @@ class CountrySeeder extends Seeder
      */
     public function run()
     {
-        $country = [
-            ['code' => '1' ,'name' => 'Colombia' ],
+        $data = [
+            ['code' => 'CO' ,'name' => 'Colombia' ],
             ];
-            DB::table('countries')->insert($country);
+            DB::table('countries')->insert($data);
     }
 }

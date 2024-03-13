@@ -15,13 +15,13 @@ class DepartmentSeeder extends Seeder
      */
     public function run(): void 
     {
-        $department = [
-        ['name' => 'Atlantico' , 'country_id' => 1],
+        $data = [
+        ['name' => 'Atlantico' , 'country_id' => '1'],
         ['name' => 'Bolivar' , 'country_id' => 1],
         ['name' => 'Antioquia' , 'country_id' => 1],
         ['name' => 'Cundinamarca' , 'country_id' => 1],
 
         ];
-        DB::table('departments')->insert($department);
+        DB::table('departments')->insert($data);
     }
 }

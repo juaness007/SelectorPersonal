@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('estilos')
+    <link href="{{ asset('css/nuevo.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 <h3>instructors Table</h3>
     <table border:3px solid purple>

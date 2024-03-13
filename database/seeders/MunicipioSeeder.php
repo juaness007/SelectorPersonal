@@ -16,12 +16,12 @@ class MunicipioSeeder extends Seeder
      */
     public function run()
     {
-         $municipality = [
-             ['code' => '1' ,'name' => 'Bogotá' , 'department_id' => 1],
-             ['code' => '2' ,'name' => 'Medellin' , 'department_id' => 1],
-             ['code' => '3' ,'name' => 'Barranquilla' , 'department_id' => 1],
+         $data = [
+             ['code' => '1' ,'name' => 'Bogotá' , 'department_id' => '1'],
+             ['code' => '2' ,'name' => 'Medellin' , 'department_id' => '1'],
+             ['code' => '3' ,'name' => 'Barranquilla' , 'department_id' => '1'],
     
              ];
-             DB::table('municipalities')->insert($municipality);
+             DB::table('municipalities')->insert($data);
     }
 }
