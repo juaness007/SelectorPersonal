@@ -12,8 +12,7 @@ class Salary extends Model
     protected $table='salaries';
 
     protected $fillable = [
-        'name',
-        'description'];
+        'salarios'];
 
     public function vacancies(){
         return $this->hasMany(Vacancy::class, 'vacancy_id', 'id');

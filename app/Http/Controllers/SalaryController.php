@@ -8,9 +8,7 @@ use App\Models\Salary;
 class SalaryController extends Controller
 {
     public function index(){
-        $salary = Salary::all();
-
-        return view ("salary.index", ['salaries'=> $salary]);
+        $salaries = Salary::all();
     }
 
     public function create(){
@@ -19,12 +17,10 @@ class SalaryController extends Controller
 
     public function store(Request $request){
     $request->validate([
-        'name'=>'required',
-        'description'=> 'required'
+        'salarios'=>'required'
     ]);
 
-    Salary::create(['name'=>$request->name,
-                    'description'=>$request->description]);
+    Salary::create(['salarios'=>$request->salarios]);
     return redirect()->route('contract.create');
 
     }
