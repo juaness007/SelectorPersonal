@@ -9,6 +9,7 @@ class Economic_activityController extends Controller
 {
 
     public function create(){
+        $economic_activities = Economic_activity::all();
         return view("economic_activity.create");
 
     }

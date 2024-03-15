@@ -9,7 +9,8 @@ class MunicipalityController extends Controller
 {
 
     public function create(){
-        return view("municipality.create");
+        $municipalities = Municipality::all();
+        return view("municipality.create", compact('municipalities'));
 
     }
     public function store(Request $request){

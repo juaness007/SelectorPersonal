@@ -101,8 +101,7 @@ Route::delete('vacancy/{vacancy}',[VacancyController::class, 'destroy'])->name('
 Route::get('vacancy/edit/{vacancy}', [VacancyController::class, 'edit'])->name('vacancy.edit');
 Route::put('vacancy/update/{vacancy}', [VacancyController::class, 'update'])->name('vacancy.update');
 
-
-route::get('salary/create', [SalaryController::class,'create'])->name('salary.create');
+route::get('salaries/create', [SalaryController::class,'create'])->name('salary.create');
 route::post('salary/store', [SalaryController::class,'store'])->name('salary.store');
 Route::get('salary/index', [SalaryController::class, 'index'])->name('salary.index');
 Route::delete('salary/{salary}',[SalaryController::class, 'destroy'])->name('salary.destroy');

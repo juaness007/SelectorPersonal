@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Company;
+use App\Models\Economic_activity;
+use App\Models\Municipality;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
@@ -10,18 +12,20 @@ class CompanyController extends Controller
     public function create()
     {
         $companies = Company::all();
-        return view("company.create", compact('companies'));
+        $municipalities = Municipality::all();
+        $economic_activities = Economic_activity::all();
+        return view("company.create", compact('companies', 'municipalities','economic_activities'));
     }
     
     public function store(Request $request){
 
         $request->validate([
-        'NIT'=> 'required|min:3',
+        'NIT'=> 'required|min:3|max:9',
         'name'=>'required|min:2',
         'legalRepresentative'=>'required|min:2',
         'email'=>'required|min:11|max:50',
-        'municipality_code'=>'required|min:1',
-        'economic_activity_code'=>'required|min:1',
+        // 'municipality_code'=>'required|min:1',
+        // 'economic_activity_code'=>'required|min:1',
         ]);
        // dd($request->all());
         Company::create([
