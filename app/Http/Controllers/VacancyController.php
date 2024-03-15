@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Vacancy;
 use App\Models\Company;
 use App\Models\Contract;
-use App\Models\Salary; // Asegúrate de importar el modelo Salary
+use App\Models\Salary;
 
 class VacancyController extends Controller
 {
@@ -25,10 +25,10 @@ class VacancyController extends Controller
 
     public function create()
     {
-        $companies = Company::all(); // Obtén todas las compañías
-        $salaries = Salary::all(); // Obtén todas las instancias de salario
+        $companies = Company::all();
+        $salaries = Salary::all();
         $contracts = Contract::all();
-        return view('vacancy.create', compact('companies', 'salaries'));
+        return view('vacancy.create', compact('companies', 'salaries', 'contracts'));
     }
 
     public function store(Request $request)
@@ -48,7 +48,7 @@ class VacancyController extends Controller
         Vacancy::create([
             'company_id' => $request->company_id,
             'description' => $request->description,
-            'salary_id' => $request->salary_id,
+            'salary_id' => $request->salarios,
             'contract_id' => $request->contract_id,
             'task_id' => $request->task_id,
             'job_position_id' => $request->job_position_id,
@@ -89,7 +89,7 @@ class VacancyController extends Controller
         $vacancy->update([
             'company_id' => $request->company_id,
             'description' => $request->description,
-            'salary_id' => $request->salary_id,
+            'salary_id' => $request->salarios,
             'contract_id' => $request->contract_id,
             'task_id' => $request->task_id,
             'job_position_id' => $request->job_position_id,

@@ -21,6 +21,6 @@ class DatabaseSeeder extends Seeder
          $this->call([DepartmentSeeder::class]);
          $this->call([MunicipioSeeder::class]);
          $this->call([ContractSeeder::class]);
-         $this->call([Job_position::class]);
+         $this->call([SalarySeeder::class]);
     }
 }
