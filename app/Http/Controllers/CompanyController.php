@@ -7,10 +7,12 @@ use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
-    public function create(){
-        return view("company.create");
-
+    public function create()
+    {
+        $companies = Company::all();
+        return view("company.create", compact('companies'));
     }
+    
     public function store(Request $request){
 
         $request->validate([

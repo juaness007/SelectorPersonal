@@ -54,6 +54,7 @@ Route::delete('candidate/{candidate}',[CandidateController::class, 'destroy'])->
 Route::get('candidate/edit/{candidate}', [CandidateController::class, 'edit'])->name('candidate.edit');
 Route::put('candidate/update/{candidate}', [CandidateController::class, 'update'])->name('candidate.update');
 
+
 route::get('company/create', [CompanyController::class,'create'])->name('company.create');
 route::post('company/store', [CompanyController::class,'store'])->name('company.store');
 Route::get('company/index', [CompanyController::class, 'index'])->name('company.index');

@@ -10,8 +10,13 @@
     <form action="{{ route('vacancy.store') }}" method="POST">
         @csrf
 
-        <input type="text" name="company_id" placeholder="Id de la compañia">
-        <textarea name="description" placeholder="Descripcion"></textarea>
+        <select name="company_id" id="">
+    @foreach ($companies as $company)
+    <option value="{{$company->id}}">{{$company->company_name}}</option>
+    @endforeach
+
+</select>
+        <textarea name="description" placeholder="Descripcion"></textarea> 
         <input type="text" name="salary_id" placeholder="Salario">
         <input type="text" name="contract_id" placeholder="Contrato">
         <input type="text" name="task_id" placeholder="Funciones">
