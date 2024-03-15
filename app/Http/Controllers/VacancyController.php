@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Vacancy;
 use App\Models\Company;
+use App\Models\Contract;
+use App\Models\Salary; // Asegúrate de importar el modelo Salary
 
 class VacancyController extends Controller
 {
@@ -24,7 +26,9 @@ class VacancyController extends Controller
     public function create()
     {
         $companies = Company::all(); // Obtén todas las compañías
-        return view('vacancy.create', compact('companies'));
+        $salaries = Salary::all(); // Obtén todas las instancias de salario
+        $contracts = Contract::all();
+        return view('vacancy.create', compact('companies', 'salaries'));
     }
 
     public function store(Request $request)

@@ -21,7 +21,11 @@
                     <option value="{{ $salary->id }}">{{ $salary->salarios }}</option>
                 @endforeach
             </select>
-            <input type="text" name="contract_id" placeholder="Contrato">
+            <select name="contrato_id" id="">
+                @foreach ( $contracts as $contract)
+                    <option value="{{ $contract->id }}">{{ $contract->name }}</option>
+                @endforeach
+            </select>
             <input type="text" name="task_id" placeholder="Funciones">
             <input type="text" name="job_position_id" placeholder="Cargo">
             <input type="text" name="ocupation_id" placeholder="Ocupación">

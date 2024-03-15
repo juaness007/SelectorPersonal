@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class ContractController extends Controller
 {
     public function index(){
-        $contract = Contract::all();
+        $contracts = Contract::all();
 
-        return view ("contract.index", ['contracts'=> $contract]);
+        return view ("contract.index", ['contracts'=> $contracts]);
     }
 
     public function create(){
