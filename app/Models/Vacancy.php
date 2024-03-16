@@ -16,7 +16,7 @@ class Vacancy extends Model
         'description',
         'salary_id',
         'contract_id',
-        'task_id',
+        'task',
         'job_position_id',
         'ocupation_id',
         'end_date',

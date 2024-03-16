@@ -41,13 +41,13 @@
                     <td>{{ $vacancy->description }}</td>
                     <td>{{ $vacancy->salary->name }}</td>
                     <td>{{ $vacancy->contract->name }}</td>
-                    <td>{{ $vacancy->task->description }}</td>
+                    <td>{{ $vacancy->task}}</td>
                     <td>{{ $vacancy->job_position->name }}</td>
                     <td>{{ $vacancy->ocupation->name }}</td>
                     <td>{{ $vacancy->end_date }}</td>
                     <td>{{ $vacancy->available_jobs }}</td>
                     <td>
-                    <form action="{{route('candidate.postulation', ['user' => $user->id, 'vacancie' => $vacancie->id])}}" method="post">
+                    <form action="" method="post">
                                     @csrf
                                     <button type="submit">Postularse</button>
                                 </form>

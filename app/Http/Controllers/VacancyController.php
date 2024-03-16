@@ -9,7 +9,7 @@ use App\Models\Contract;
 use App\Models\Job_position;
 use App\Models\Ocupation;
 use App\Models\Salary;
-
+use Illuminate\Support\Facades\Auth;
 
 class VacancyController extends Controller
 {
@@ -31,6 +31,7 @@ class VacancyController extends Controller
         $contracts = Contract::all();
         $job_positions = Job_position::all();
         $ocupations = Ocupation::all();
+
         return view("vacancy.create", compact('companies','salaries','contracts','job_positions','ocupations'));
     }
 
@@ -53,7 +54,7 @@ class VacancyController extends Controller
             'description' => $request->description,
             'salary_id' => $request->salary_id,
             'contract_id' => $request->contract_id,
-            'task' => $request->task_id,
+            'task' => $request->task,
             'job_position_id' => $request->job_position_id,
             'ocupation_id' => $request->ocupation_id,
             'end_date' => $request->end_date,

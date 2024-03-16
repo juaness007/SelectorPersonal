@@ -48,8 +48,8 @@
         <span>{{$message}}</span>
         @enderror
 
-        <input type="text" name="task_id" placeholder="Funciones">
-        @error('task_id')
+        <input type="text" name="task" placeholder="Funciones">
+        @error('task')
         <span>{{$message}}</span>
         @enderror
 
