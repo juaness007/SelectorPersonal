@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('description');
             $table->foreignId('salary_id')->constrained('salaries')->onDelete('cascade');
             $table->foreignId('contract_id')->constrained('contracts')->onDelete('cascade');
-            $table->foreignId('task_id')->constrained('tasks')->onDelete('cascade');
+            // $table->foreignId('task_id')->constrained('tasks')->onDelete('cascade');
+            $table->string('task');
             $table->foreignId('job_position_id')->constrained('job_positions')->onDelete('cascade');
             $table->foreignId('ocupation_id')->constrained('ocupations')->onDelete('cascade');
             $table->date('end_date');

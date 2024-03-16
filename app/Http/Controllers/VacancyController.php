@@ -41,7 +41,7 @@ class VacancyController extends Controller
             'description' => 'required|min:10',
             'salary_id' => 'required',
             'contract_id' => 'required',
-            'task_id' => 'required',
+            'task' => 'required',
             'job_position_id' => 'required',
             'ocupation_id' => 'required',
             'end_date' => 'required',
@@ -51,16 +51,16 @@ class VacancyController extends Controller
         Vacancy::create([
             'company_id' => $request->company_id,
             'description' => $request->description,
-            'salary_id' => $request->salarios,
+            'salary_id' => $request->salary_id,
             'contract_id' => $request->contract_id,
-            'task_id' => $request->task_id,
+            'task' => $request->task_id,
             'job_position_id' => $request->job_position_id,
             'ocupation_id' => $request->ocupation_id,
             'end_date' => $request->end_date,
             'avaliable_jobs' => $request->avaliable_jobs
         ]);
         
-        return redirect()->route('login');
+        return redirect()->route('vacancy.index');
     }
 
     public function destroy(Vacancy $vacancy)
