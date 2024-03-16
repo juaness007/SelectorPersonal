@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('job_positions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('ocupation_id')->constrained('ocupations')->onDelete('cascade');
+            $table->foreignId('ocupation_id')->references('id')->on('ocupations');
             $table->string('name');
             $table->string('description');
             $table->timestamps();

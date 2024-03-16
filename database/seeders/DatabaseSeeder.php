@@ -3,7 +3,11 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use Database\Seeders\JobPositionSeeder ;
 use Illuminate\Database\Seeder;
+
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +24,6 @@ class DatabaseSeeder extends Seeder
          $this->call([MunicipioSeeder::class]);
          $this->call([SalarySeeder::class]);
          $this->call([ContractSeeder::class]);
+         $this->call([JobPositionSeeder::class]);
     }
 }
