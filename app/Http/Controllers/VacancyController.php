@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Vacancy;
 use App\Models\Company;
 use App\Models\Contract;
+use App\Models\Job_position;
+use App\Models\Ocupation;
 use App\Models\Salary;
 
 
@@ -24,7 +26,12 @@ class VacancyController extends Controller
         return view('vacancy.index', ['vacancies' => $vacancies]);
     }
     public function create(){
-        return view("vacancy.create");
+        $companies = Company::all();
+        $salaries = Salary::all();
+        $contracts = Contract::all();
+        $job_positions = Job_position::all();
+        $ocupations = Ocupation::all();
+        return view("vacancy.create", compact('companies','salaries','contracts','job_positions','ocupations'));
     }
 
     public function store(Request $request)

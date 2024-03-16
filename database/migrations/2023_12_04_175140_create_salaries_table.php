@@ -15,7 +15,8 @@ return new class extends Migration
 {
     Schema::create('salaries', function (Blueprint $table) {
         $table->id();
-        $table->string('salarios'); // Cambiado a tipo string
+        $table->string('name'); // Cambiado a tipo string
+        $table->string('description'); // Cambiado a tipo string
         $table->timestamps();
     });
 }

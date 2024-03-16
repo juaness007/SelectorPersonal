@@ -36,13 +36,19 @@
         </select>
         <input type="text" name="task_id" placeholder="Funciones">
         <select name="" id="">
-            @forelse($contracts as $contract)
-            <option value="{{$contract->id}}">{{$contract->name}}</option>
+            @forelse($job_positions as $job_position)
+            <option value="{{$job_position->id}}">{{$job_position->name}}</option>
             @empty
-            <option>No hay contratos</option>
+            <option>No hay cargos</option>
             @endforelse
         </select>
-        <input type="text" name="ocupation_id" placeholder="Ocupacion">
+        <select name="" id="">
+            @forelse($ocupations as $ocupation)
+            <option value="{{$ocupation->id}}">{{$ocupation->name}}</option>
+            @empty
+            <option>No hay ocuapciones</option>
+            @endforelse
+        </select>
         <input type="date" name="end_date" value="2022-01-01" min="2022-01-01" max="2024-12-31">
         <input type="number" name="avaliable_jobs" placeholder="Puestos disponibles">
         <input type="submit" name="send">
