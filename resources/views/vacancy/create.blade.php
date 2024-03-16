@@ -5,10 +5,9 @@
 @endsection
 
 @section('content')
-
-<div class="form-container">
-    <form action="{{ route('vacancy.store') }}" method="POST">
-        @csrf
+    <div class="form-container">
+        <form action="{{ route('vacancy.store') }}" method="POST">
+            @csrf
 
         <select name="" id="">
             @forelse($companies as $company)

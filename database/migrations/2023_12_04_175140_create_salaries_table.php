@@ -12,14 +12,14 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('salaries', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('description');
-            $table->timestamps();
-        });
-    }
+{
+    Schema::create('salaries', function (Blueprint $table) {
+        $table->id();
+        $table->string('salarios'); // Cambiado a tipo string
+        $table->timestamps();
+    });
+}
+
 
     /**
      * Reverse the migrations.

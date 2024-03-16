@@ -12,7 +12,6 @@
 
 
 <input type="text" name="name", placeholder="Nombre">
-<input type="text" name="description", placeholder="Descripcion">
 
 <input type="submit" name="send">
 </form>

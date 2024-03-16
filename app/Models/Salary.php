@@ -2,20 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Salary extends Model
 {
-    use HasFactory;
+    protected $fillable = ['salarios']; // Especifica los campos que se pueden asignar masivamente
 
-    protected $table='salaries';
-
-    protected $fillable = [
-        'name',
-        'description'];
-
-    public function vacancies(){
-        return $this->hasMany(Vacancy::class, 'vacancy_id', 'id');
-    }
+    // No necesitas definir ninguna relación en este caso, ya que la tabla solo contiene información sobre los salarios
 }
