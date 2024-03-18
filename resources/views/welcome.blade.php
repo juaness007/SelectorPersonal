@@ -16,7 +16,7 @@
 
     <form action="{{ url('logout') }}" method="post">
         @csrf
-        <button type="submit">Cerrar Sesión</button>
+        <button class="boton_w" type="submit">Cerrar Sesión</button>
     </form>
 
 @endsection

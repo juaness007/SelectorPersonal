@@ -5,27 +5,34 @@
 @endsection
 
 @section('content')
-
-    @if(session('error'))
-        <p style="color: red;">{{ session('error') }}</p>
-    @endif
-
     <div class="form-container">
-    <form action="{{ url('login') }}" method="post">
-        @csrf
-        <label for="email" class="letralogin">Correo:</label>
-        <input type="text" name="email" required>
-        <br>
-        <label for="password" class="letralogin">Contraseña:</label>
-        <input type="password" name="password" required>
-        <br>
-        <input type="submit" value="Ingresar"/>
-    </form>
+        @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
 
-    <p class="letralogin">¿No estas registrado?</p>
+        <form action="{{ url('login') }}" method="post">
+            @csrf
+            <label for="email" class="letralogin">Correo:</label>
+            <input type="text" name="email" required>
+            <br>
+            <label for="password" class="letralogin">Contraseña:</label>
+            <input type="password" name="password" required>
+            <br>
+            <input type="submit" value="Ingresar"/>
+            
+        </form>
+    </div>
+
+    
     <div class="form-container">
-                <form action="{{ route('user.create') }}">
-                <input type="submit" value="Registrate"/>
-                </form>
-
+        
+        <form action="{{ route('user.create') }}">
+        <p class="letralogin">¿No estás registrado?</p>
+            <input type="submit" value="Regístrate"/>
+        
+        </form>
+    </div>
 @endsection
+

@@ -15,16 +15,13 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
-
-        //dd($credentials); 
-
+        // Intentar autenticar al usuario
         if (Auth::attempt($credentials)) {
+            // Autenticación exitosa
             return redirect()->route('welcome');
         }
-
-        
-         dd(Auth::user()); 
-        return redirect()->route('login')->with('error', 'Credenciales incorrectas. Por favor, inténtelo de nuevo.');
+        // Autenticación fallida: redireccionar con mensaje de error
+        return redirect()->route('login')->withErrors(['error' => 'Credenciales incorrectas. Por favor, inténtelo de nuevo.']);
     }
 
     public function logout(Request $request)

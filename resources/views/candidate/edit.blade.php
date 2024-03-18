@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('estilos')
-    <link href="{{ asset('css/nuevo.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/edit.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
 
-<form action="{{ route('candidate.update', $candidate->id) }}" method="POST">
+<form action="{{ route('candidate.update', $candidate ->id) }}" method="POST">
     @method('PUT')
     @csrf
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('estilos')
-    <link href="{{ asset('css/nuevo.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/index.css') }}" rel="stylesheet">
 @endsection
 @section('content')
     <h3>Vacancies Table</h3>
@@ -9,7 +9,7 @@
     <form action="{{ route('vacancy.index') }}" method="GET">
         <label for="company">Filtrar por nombre de la empresa:</label>
         <input type="text" name="company" id="company" value="{{ request('company') }}">
-        <button type="submit">Filtrar</button>
+        <button type="submit">Buscar</button>
     </form>
     
     <table style="border: 3px solid black;">
@@ -55,7 +55,7 @@
                     @auth
                         @if(auth()->user()->role_id == 3)
                             <td>
-                                <form action="{{ route('vacancy.destroy', $vacancy) }}" method="POST">
+                                <form action="{{ route('vacancy.index', $vacancy) }}" method="POST">
                             @csrf
                             @method('delete')
                             <button type="submit">Eliminar</button>
@@ -70,7 +70,7 @@
                 </form>
             @empty
                 <tr>
-                    <td colspan="11">No data available</td>
+                    <td colspan="11">No haz aplicado a ninguna vacante</td>
                 </tr>
             @endforelse
         </tbody>

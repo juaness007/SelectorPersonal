@@ -2,7 +2,7 @@
 body {
     background-repeat: no-repeat;
     background-image:linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)),
-     url('/img/fondo.jpg')  ;
+    url('/img/fondo.jpg')  ;
     background-size: 100vw 100vh;
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Montserrat', sans-serif;
@@ -11,46 +11,15 @@ body {
     padding-top: 80px;
 
 }
-/*
-nav {
-    background-color: #333;
-    color: #fff;
-    padding-bottom: 50px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul a {
-    text-decoration: none;
-    color: #fff;
-}
-
-nav ul a:hover {
-    background-color: #555;
-}
-
-nav ul li {
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-nav ul li:hover {
-    background-color: #555;
-}*/
-
 .form-container {
     max-width: 400px;
-    margin: 50px auto;
-    padding: 50px;
+    margin: 60px auto;
+    padding: 30px;
     background-color: rgba(5,7,12,0.40);
     border-radius: 5px;
     box-shadow: 0 0 10px rgb(255, 255, 255);
 }
+
 
 .form-container input {
     width: 100%;
@@ -62,7 +31,7 @@ nav ul li:hover {
 }
 
 .form-container input[type="submit"] {
-    background-color: #0004d4f5;
+    background-color: #5a1efdf5;
     color: white;
     border: none;
     border-radius: 4px;
@@ -70,7 +39,7 @@ nav ul li:hover {
 }
 
 .input[type="submit"]:hover {
-    background-color: rgb(68, 83, 68);
+    background-color: rgb(0, 253, 0);
 }
 
  th, td {
@@ -83,14 +52,7 @@ nav ul li:hover {
  }
 
 
- table {
-    border: 3px solid #000000;
-    width: 50%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: transparent;
 
-} 
 
 th, td {
     border: 1px solid rgb(32, 32, 32);
@@ -194,7 +156,7 @@ nav ul li:last-child {
 
 nav ul li a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }

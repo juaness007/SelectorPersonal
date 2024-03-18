@@ -16,6 +16,7 @@ class CandidateController extends Controller
 
     public function create()
     {
+        $candidates = Candidate:: All();
         $users = User::all(); // Obtener todos los usuarios
         return view("candidate.create", ['users' => $users]);
     }
